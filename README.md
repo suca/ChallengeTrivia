@@ -1,12 +1,10 @@
 # PhoneGap Workshop #
 
-In this tutorial, you create a fully functional employee directory application with PhoneGap. You will learn:
+The project is an app developed for the challenge of the Space Apps from the NASA, https://2014.spaceappschallenge.org/challenge/
 
-- How to use different local data storage strategies.
-- How to use several PhoneGap APIs such as Geolocation, Contacts, and Camera.
-- How to handle specific mobile problems such as touch events, scrolling, styling, page transitions, etc.
-- How to build an application using a single page architecture and HTML templates.
-- How to build (compile and package) an application for 6 platforms using PhoneGap Build.
-- To complete this tutorial, all you need is a code editor, a modern browser, and a connection to the Internet. A working knowledge of HTML and JavaScript is assumed, but you don’t need to be a JavaScript guru.
+The project is based on HTML5, revielJS and phoneGap for convert to mobile app, also that the app is running on chrome browser.
 
-Complete instructions for this tutorial are available here: http://coenraets.org/blog/phonegap-tutorial/.
+The goal is show data and maps about of the world, in an educational and enjoyable way.
+
+The project is ready for run on emulator Android with the 'phonegap run android' command on your terminal
+
