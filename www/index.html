@@ -29,9 +29,20 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>EARTH TRIVIAN</h1>
-                    <img src="img/world.png" alt="">
-
+                    <div class="title-start">
+                        <h1>EARTH TRIVIAN</h1>    
+                    </div>
+                    
+                    <script>
+                                    $(document).ready(function() {
+                  $('.btn-blob').click(function() {
+                    $(this).toggleClass('blob');
+                  });
+                });
+                </script>
+                <body>
+                    <div id="cloud"></div>
+                    <div id="loading">
                     <p>
                         <button class="start-button" onclick="goToSlide(1);">PLAY</button><br>
                         <button class="start-button" onclick="goToSlide(5);">SETTINGS</button><br>
@@ -43,7 +54,7 @@
                 <section>
                     <h2>DIFFICULTY</h2>
                     <div>
-                        <button class="difficult-button" onclick="goToSlide(2);">EASY</button>
+                        <button class="difficult-button" onclick="goToSlide(2);getImage(1);">EASY</button>
                         
                         <button class="difficult-button" onclick="goToSlide(3);">MEDIUM</button>
 
@@ -54,9 +65,14 @@
 
                 <section>
                     <h2>EASY</h2>
-                    <p>
-                        
-                    </p>
+                    Puntos:<br>
+                    <script>var a = "";</script>
+                    <center>
+                    <img id = "imagenJuego" width="600" height="400"><br>
+                    <a class="button"> <span id="label0">Option 1</span> </a>
+                    <a class="button"> <span id="label1">Option 2</span> </a><br><br>
+                    <a class="button"> <span id="label2">Option 3</span> </a>
+                    <a class="button"> <span id="label3">Option 4</span> </a>
                 </section>
                 <section>
                     <h2>DIFFICULT</h2>

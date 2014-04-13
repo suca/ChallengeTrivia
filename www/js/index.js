@@ -129,3 +129,127 @@ if (typeof Media === "undefined") {
 
 
 audio.pause();
+
+
+
+//Easy Module
+    // JavaScript Document
+var myWindow;
+
+var bolivia = new Array("ib1.png", "ib2.png", "ib4.png", "ib5.png", "ib6.png", "ib7.png"),
+    boliviaDesc = new Array("Illimani", "Lago Titicaca", "Sajama", "Salar de Uyuni", "Tiwanaku", "Valle de la Luna"),
+    manmade = new Array(),
+    manmadeDesc = new Array(),
+    nature = new Array(),
+    descNature = new Array();
+
+function redirect (page) {
+    this.myWindow = location.href=page;
+}
+
+function closeWin () {
+    this.myWindow.close();  
+}
+
+function getRandomNumber (lo, hi) {
+    return Math.floor(Math.random()*(hi - lo + 1)) + lo - 1;
+}
+
+function getImage (index) {
+    if(index == 1) { //bolivia
+        var randIndex = getRandomNumber(1, bolivia.length),
+            randIndex2,
+            vis = [],
+            randObj,
+            flag = true,
+            i;
+        document.getElementById("imagenJuego").src = "img/"+bolivia[randIndex];
+        randObj = getRandomNumber(1, 4);
+        vis.push(randIndex);
+        document.getElementById("label"+randObj).innerHTML = boliviaDesc[randIndex];
+        i = 0;
+        for(; i < 4; ) {
+            if(i !== randObj) {
+                randIndex2 = getRandomNumber(1, bolivia.length);
+                flag = true;
+                for(var j = 0; j < vis.length; j++) {
+                    if(randIndex2 === vis[j]) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if(flag === true) {
+                    document.getElementById("label"+i).innerHTML = boliviaDesc[randIndex2];
+                    vis.push(randIndex2);
+                    i++;
+                }
+            } else {
+                i++;
+            }
+        }
+    } else if(index == 2) { //manmade
+        var randIndex = getRandomNumber(1, manmade.length),
+            randIndex2,
+            vis = [],
+            randObj,
+            flag = true,
+            i;
+        document.getElementById("imagenJuego").src = "img/"+manmade[randIndex];
+        randObj = getRandomNumber(1, 4);
+        vis.push(randIndex);
+        document.getElementById("label"+randObj).innerHTML = manmadeDesc[randIndex];
+        i = 0;
+        for(; i < 4; ) {
+            if(i !== randObj) {
+                randIndex2 = getRandomNumber(1, manmade.length);
+                flag = true;
+                for(var j = 0; j < vis.length; j++) {
+                    if(randIndex2 === vis[j]) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if(flag === true) {
+                    document.getElementById("label"+i).innerHTML = manmadeDesc[randIndex2];
+                    vis.push(randIndex2);
+                    i++;
+                }
+            } else {
+                i++;
+            }
+        }
+    } else if(index == 3) { //nature
+        var randIndex = getRandomNumber(1, nature.length),
+            randIndex2,
+            vis = [],
+            randObj,
+            flag = true,
+            i;
+        document.getElementById("imagenJuego").src = "img/"+nature[randIndex];
+        randObj = getRandomNumber(1, 4);
+        vis.push(randIndex);
+        document.getElementById("label"+randObj).innerHTML = natureDesc[randIndex];
+        i = 0;
+        for(; i < 4; ) {
+            if(i !== randObj) {
+                randIndex2 = getRandomNumber(1, nature.length);
+                flag = true;
+                for(var j = 0; j < vis.length; j++) {
+                    if(randIndex2 === vis[j]) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if(flag === true) {
+                    document.getElementById("label"+i).innerHTML = natureDesc[randIndex2];
+                    vis.push(randIndex2);
+                    i++;
+                }
+            } else {
+                i++;
+            }
+        }
+    }
+}
+
+
