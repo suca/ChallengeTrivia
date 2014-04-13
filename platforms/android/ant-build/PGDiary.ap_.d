@@ -25,7 +25,11 @@
 /var/www/challengeEarth/platforms/android/assets/www/cordova.js \
 /var/www/challengeEarth/platforms/android/assets/www/js \
 /var/www/challengeEarth/platforms/android/assets/www/cordova_plugins.js \
+/var/www/challengeEarth/platforms/android/assets/www/img/home.png \
 /var/www/challengeEarth/platforms/android/assets/www/img/cordova.png \
+/var/www/challengeEarth/platforms/android/assets/www/img/world.png \
+/var/www/challengeEarth/platforms/android/assets/www/img/progress_bar.gif \
+/var/www/challengeEarth/platforms/android/assets/www/img/world.jpg \
 /var/www/challengeEarth/platforms/android/assets/www/img/logo.png \
 /var/www/challengeEarth/platforms/android/assets/www/libPresentation/plugin \
 /var/www/challengeEarth/platforms/android/assets/www/libPresentation/lib \
@@ -137,6 +141,7 @@
 /var/www/challengeEarth/platforms/android/assets/www/spec/lib/jasmine-1.2.0/MIT.LICENSE \
 /var/www/challengeEarth/platforms/android/assets/www/res/icon \
 /var/www/challengeEarth/platforms/android/assets/www/res/screen \
+/var/www/challengeEarth/platforms/android/assets/www/res/dream.mp3 \
 /var/www/challengeEarth/platforms/android/assets/www/res/icon/webos \
 /var/www/challengeEarth/platforms/android/assets/www/res/icon/android \
 /var/www/challengeEarth/platforms/android/assets/www/res/icon/blackberry \
@@ -197,6 +202,7 @@
 /var/www/challengeEarth/platforms/android/assets/www/res/screen/tizen/README.md \
 /var/www/challengeEarth/platforms/android/assets/www/res/screen/windows-phone/screen-portrait.jpg \
 /var/www/challengeEarth/platforms/android/assets/www/css/index.css \
+/var/www/challengeEarth/platforms/android/assets/www/js/jquery-1.9.1.js \
 /var/www/challengeEarth/platforms/android/assets/www/js/zepto.min.js \
 /var/www/challengeEarth/platforms/android/assets/www/js/index.js \
 /var/www/challengeEarth/platforms/android/ant-build/AndroidManifest.xml \

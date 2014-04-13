@@ -71,119 +71,61 @@ sayingTweetFn = function () {
     jQuery("#sayingTweet").css("display","block");
     jQuery("#lastTweet").css("display","none");
 };
-
-dataUpdate ={
-  "coordinates": null,
-  "favorited": false,
-  "created_at": "Wed Sep 05 00:37:15 +0000 2012",
-  "truncated": false,
-  "id_str": "2441019864",
-  "entities": {
-    "urls": [
- 
-    ],
-    "hashtags": [
-      {
-        "text": "peterfalk",
-        "indices": [
-          35,
-          45
-        ]
-      }
-    ],
-    "user_mentions": [
- 
-    ]
-  },
-  "in_reply_to_user_id_str": null,
-  "text": "Maybe he'll finally find his keys.",
-  "contributors": null,
-  "retweet_count": 0,
-  "id": 2441019864,
-  "in_reply_to_status_id_str": null,
-  "geo": null,
-  "retweeted": false,
-  "in_reply_to_user_id": null,
-  "place": null,
-  "user": {
-    "name": "Jason Costa",
-    "profile_sidebar_border_color": "86A4A6",
-    "profile_sidebar_fill_color": "A0C5C7",
-    "profile_background_tile": false,
-    "profile_image_url": "http://a0.twimg.com/profile_images/1751674923/new_york_beard_normal.jpg",
-    "created_at": "Wed May 28 00:20:15 +0000 2008",
-    "location": "",
-    "is_translator": true,
-    "follow_request_sent": false,
-    "id_str": "14927800",
-    "profile_link_color": "FF3300",
-    "entities": {
-      "url": {
-        "urls": [
-          {
-            "expanded_url": "http://www.jason-costa.blogspot.com/",
-            "url": "http://t.co/YCA3ZKY",
-            "indices": [
-              0,
-              19
-            ],
-            "display_url": "jason-costa.blogspot.com"
-          }
-        ]
-      },
-      "description": {
-        "urls": [
- 
-        ]
-      }
-    },
-    "default_profile": false,
-    "contributors_enabled": false,
-    "url": "http://t.co/YCA3ZKY",
-    "favourites_count": 883,
-    "utc_offset": -28800,
-    "id": 14927800,
-    "profile_image_url_https": "https://si0.twimg.com/profile_images/1751674923/new_york_beard_normal.jpg",
-    "profile_use_background_image": true,
-    "listed_count": 150,
-    "profile_text_color": "333333",
-    "protected": false,
-    "lang": "en",
-    "followers_count": 8760,
-    "time_zone": "Pacific Time (US & Canada)",
-    "profile_background_image_url_https": "https://si0.twimg.com/images/themes/theme6/bg.gif",
-    "verified": false,
-    "profile_background_color": "709397",
-    "notifications": false,
-    "description": "Platform at Twitter",
-    "geo_enabled": true,
-    "statuses_count": 5532,
-    "default_profile_image": false,
-    "friends_count": 166,
-    "profile_background_image_url": "http://a0.twimg.com/images/themes/theme6/bg.gif",
-    "show_all_inline_media": true,
-    "screen_name": "jasoncosta",
-    "following": false
-  },
-  "source": "<a href=\"http://jason-costa.blogspot.com\" rel=\"nofollow\">My Shiny App</a>",
-  "in_reply_to_screen_name": null,
-  "in_reply_to_status_id": "@wher3on3arth"
-};
-
-$.ajax({
-    //url: "https://api.twitter.com/1.1/statuses/update.json",
-    url: "proces.php",
-    type:'POST',
-    headers: {
-        consumer_key: "ceMAQIxjwUYFNuIPMntd0Wiii",
-        consumer_secret: "kgiFTojwr4d1jtvpOQvf4DqZ2lFKDgQCT5k7OJelC0hfUZUiZU",
-        token: "2441019864-BWe9OFRrWu1FKZK4EcP6m9sRxmccX9Xv9bGCxF3",
-        token_secret: "sSyvpd4rv440kLVEBBNLVfGxxttBgvZIMlo5O03V4rCu4"
-    },
-    data: {
-      status: "Check this out!!"
-    },
-    success:function(data) { 
-        alert(data);
+onSoundFn = function () {
+    if (jQuery(".offSound").length > 0) {
+        jQuery(".offSound").removeClass("options-sound-selected");
     }
-});
+    jQuery("#soundConfiguration").css("display", "block");
+    jQuery(".onSound").addClass("options-sound-selected");
+    if (media) {
+        media.play();
+    } else {
+        audio.play();    
+    }
+    
+
+};
+offSoundFn = function () {
+    if (jQuery(".offSound").length > 0) {
+        jQuery(".onSound").removeClass("options-sound-selected");
+    }
+    jQuery("#soundConfiguration").css("display", "none");
+    jQuery(".offSound").addClass("options-sound-selected");
+    if (media) {
+        media.pause();
+    } else {
+        audio.pause();
+    }
+
+    
+    
+};
+var media;
+var audio;
+if(typeof deviceready !== "undefined"){
+    document.addEventListener("deviceready", onDeviceReady, false);
+}
+
+
+onDeviceReady = function () {
+    media = new Media("res/dream.mp3");    
+    media.play();
+}
+if (typeof Media === "undefined") {
+    if (document.getElementsByTagName("audio").length === 0) {
+        audio = document.createElement("audio");
+        audio.loop = "loop";
+        audio.autoplay = "autoplay";
+        var source = document.createElement("source");
+        source.src = "res/dream.mp3";
+        source.type = "audio/mp3";
+        audio.appendChild(source);
+        jQuery("#soundConfiguration").append(audio);
+    }
+
+} else {
+    var a = 1+1;
+}
+
+
+audio.pause();

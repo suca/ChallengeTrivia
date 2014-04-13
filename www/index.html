@@ -1,25 +1,4 @@
 
-<!--<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name = "format-detection" content = "telephone=no"/>
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title></title>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/zepto.min.js"></script>
-         <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-  </head>
-  <body>
-    <h1> WHERE on EARTH</h1>
-
-    <div id="map_canvas"></div>
-
-  </body>
-</html>
--->
 <!doctype html>
 <html lang="en">
 
@@ -45,31 +24,30 @@
     </head>
 
     <body>
-
         <div class="reveal">
 
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>WHERE On EARTH</h1>
-                    <h3>Try it!</h3>
+                    <h1>EARTH TRIVIAN</h1>
+                    <img src="img/world.png" alt="">
+
                     <p>
                         <button class="start-button" onclick="goToSlide(1);">PLAY</button><br>
                         <button class="start-button" onclick="goToSlide(5);">SETTINGS</button><br>
-                        <button class="start-button" onclick="goToSlide(6);">EXIT</button><br>
                         <button class="start-button" onclick="goToSlide(7);">TWEETS</button><br>
-                        
+                        <button class="start-button" onclick="goToSlide(6);">EXIT</button><br>
                     </p>
                 </section>
 
                 <section>
                     <h2>DIFFICULTY</h2>
                     <div>
-                        <button class="start-button" onclick="goToSlide(2);">EASY</button>
+                        <button class="difficult-button" onclick="goToSlide(2);">EASY</button>
                         
-                        <button class="start-button" onclick="goToSlide(3);">MEDIUM</button>
+                        <button class="difficult-button" onclick="goToSlide(3);">MEDIUM</button>
 
-                        <button class="start-button" onclick="goToSlide(4);">HARD</button>
+                        <button class="difficult-button" onclick="goToSlide(4);">HARD</button>
                     </div>
 
                 </section>
@@ -97,9 +75,54 @@
                 </section>
                 <section>
                      <h3> SETTINGS</h3>
-                     <b id="">SOUND</b>
-                     <b>MUSIC</b>
-                     <b>HELP</b>
+                     <table class="options-sound" cellspacing="20">
+                         <tbody>
+                             <tr>
+                                 <td>SOUND</td>
+                                 <td>
+                                    <div>
+                                        <button class="onSound options-sound-selected" onclick="onSoundFn();">ON</button>
+                                        <button class="offSound" onclick="offSoundFn();">OFF</button>
+                                    </div>
+                                    <div id="soundConfiguration" style="display:none;">
+                                        
+                                    </div>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>HELP</td>
+                                 <td>
+                                    <span>
+                                        Working on.
+                                    </span>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>ABOUT</td>
+                                 <td>
+                                    <div>
+                                        <div>Where on Earth</div>
+                                        <table class="contributors">
+                                            <tbody>
+                                                <tr><td><span>Gabriel</span></td></tr>
+                                                <tr><td><span>Mauri</span></td></tr>
+                                                <tr><td><span>Victor</span></td></tr>
+                                                <tr><td><span>Moises</span></td></tr>
+                                                <tr><td><span>Kevin</span></td></tr>
+                                                <tr><td><span>Omar</span></td></tr>
+                                                <tr><td><span>Alvaro</span></td></tr>
+                                                <tr><td><span>Edwin</span></td></tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                    </div>
+                                 </td>
+                             </tr>
+                         </tbody>
+                     </table>
+                     
+                     <div> </div>
+                     
                 </section>
                 <section>
                     <h3>The Game was finished</h3>
