@@ -31,10 +31,6 @@
         <title></title>
         
         <script type="text/javascript" src="js/zepto.min.js"></script>
-         
-        <script type="text/javascript" src="js/index.js"></script>
-
-
         <link rel="stylesheet" href="libPresentation/css/reveal.min.css">
         <link rel="stylesheet" href="libPresentation/css/theme/default.css" id="theme">
 
@@ -42,6 +38,7 @@
         <link rel="stylesheet" href="libPresentation/lib/css/zenburn.css">
         <script src="js/jquery-1.9.1.js" type="text/javascript"></script>        
 
+        <script type="text/javascript" src="js/index.js"></script>
         <!--[if lt IE 9]>
         <script src="lib/js/html5shiv.js"></script>
         <![endif]-->
@@ -58,10 +55,9 @@
                     <h3>Try it!</h3>
                     <p>
                         <button class="start-button" onclick="goToSlide(1);">PLAY</button><br>
-                        
                         <button class="start-button" onclick="goToSlide(5);">SETTINGS</button><br>
-
                         <button class="start-button" onclick="goToSlide(6);">EXIT</button><br>
+                        <button class="start-button" onclick="goToSlide(7);">TWEETS</button><br>
                         
                     </p>
                 </section>
@@ -109,6 +105,14 @@
                     <h3>The Game was finished</h3>
                     
                     <button type="" class="return-game-button" onclick="goToSlide(1);">RETURN TO GAME</button>
+                </section>
+                <section class="twitter-class">
+                    <button type="">Latest</button>
+                    <button type="">Saying</button>
+
+                    <div id="lastTweet" onclick="lastTweetFn();"></div>
+                    <div id="sayingTweet" style="display:none;" onclick="sayingTweetFn();"></div>
+
                 </section>
             </div>
 
