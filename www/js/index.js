@@ -133,15 +133,17 @@ audio.pause();
 
 
 //Easy Module
-    // JavaScript Document
+// JavaScript Document
 var myWindow;
 
 var bolivia = new Array("ib1.png", "ib2.png", "ib4.png", "ib5.png", "ib6.png", "ib7.png"),
     boliviaDesc = new Array("Illimani", "Lago Titicaca", "Sajama", "Salar de Uyuni", "Tiwanaku", "Valle de la Luna"),
-    manmade = new Array(),
-    manmadeDesc = new Array(),
-    nature = new Array(),
-    descNature = new Array();
+    manmade = new Array("CAT ISLAND BAHAMAS.jpg", "Egyptian dust plume,red sea.jpg", "Hawaii.jpg", "Island of CRETE, GREECE.jpg", "Pavlof Volcano,Alaska Peninsula.jpg", "Smoke plumes over idaho and montana.jpg", "Sochi Olympic event.jpg", "Southern Intalian Peninsula al night.jpg", "The Koreas at night.jpg"),
+    manmadeDesc = new Array("Cat Island Bahamas", "Egyptian Dust Plume", "Hawaii", "Island of CRETE", "Pavlof Volkano, Alaska", "Smoke plumes", "Sochi Olympic event", "Southern Intalian Peninsula", "The Koreas at Night"),
+    nature = new Array("Abu Simbel, en Egipto-.jpg", "Baalbek, Líbano-.jpg", "Chichen Itza, en México-.jpg", "Dzibilchaltun, en México-.jpg", "La Gran Muralla China-.jpg", "Machu Picchu en Perú-.jpg", "Mayapan, México-.jpg", "Pirámides de Guiza, en Egipto-.jpg", "Saqqara, en Egipto-.jpg", "Stonehenge, en Inglaterra-.jpg", "Templo de Angkor Wat en Camboya-.jpg", "Teotihuacan, México-.jpg", "Uxmal, México-  .jpg"),
+    natureDesc = new Array("Abu Simbel, Egipto", "Baalbek, Libano", "Chichen Itza, Mexico", "Dzibilchaltun, Mexico", "La Gran Muralla China", "Machuu Picchu, Peru", "Mayapan, Mexico", "Piramides de Guiza, Egipto", "Saqqara, Egipto", "Stonehenge, Inglaterra", "Templo de Angkor Wat, Camboya", "Teotihuacan, Mexico", "Uxmal, Mexico");
+    
+var randObj, puntaje = 0;
 
 function redirect (page) {
     this.myWindow = location.href=page;
@@ -156,14 +158,18 @@ function getRandomNumber (lo, hi) {
 }
 
 function getImage (index) {
+    document.getElementById("puntaje").innerHTML = this.puntaje;
+    document.getElementById("puntaje2").innerHTML = this.puntaje;
+    document.getElementById("puntaje3").innerHTML = this.puntaje;
     if(index == 1) { //bolivia
         var randIndex = getRandomNumber(1, bolivia.length),
             randIndex2,
             vis = [],
-            randObj,
             flag = true,
             i;
         document.getElementById("imagenJuego").src = "img/"+bolivia[randIndex];
+        document.getElementById("imagenJuego2").src = "img/"+bolivia[randIndex];
+        document.getElementById("imagenJuego3").src = "img/"+bolivia[randIndex];
         randObj = getRandomNumber(1, 4);
         vis.push(randIndex);
         document.getElementById("label"+randObj).innerHTML = boliviaDesc[randIndex];
@@ -191,10 +197,11 @@ function getImage (index) {
         var randIndex = getRandomNumber(1, manmade.length),
             randIndex2,
             vis = [],
-            randObj,
             flag = true,
             i;
         document.getElementById("imagenJuego").src = "img/"+manmade[randIndex];
+        document.getElementById("imagenJuego2").src = "img/"+manmade[randIndex];
+        document.getElementById("imagenJuego3").src = "img/"+manmade[randIndex];
         randObj = getRandomNumber(1, 4);
         vis.push(randIndex);
         document.getElementById("label"+randObj).innerHTML = manmadeDesc[randIndex];
@@ -222,10 +229,11 @@ function getImage (index) {
         var randIndex = getRandomNumber(1, nature.length),
             randIndex2,
             vis = [],
-            randObj,
             flag = true,
             i;
         document.getElementById("imagenJuego").src = "img/"+nature[randIndex];
+        document.getElementById("imagenJuego2").src = "img/"+nature[randIndex];
+        document.getElementById("imagenJuego3").src = "img/"+nature[randIndex];
         randObj = getRandomNumber(1, 4);
         vis.push(randIndex);
         document.getElementById("label"+randObj).innerHTML = natureDesc[randIndex];
@@ -252,4 +260,25 @@ function getImage (index) {
     }
 }
 
+function victory (i, selection) {
+    if(selection == this.randObj) {
+        alert("CORRECT ANSWER!");
+        this.puntaje += 1;
+        document.getElementById("puntaje").innerHTML = this.puntaje;
+        document.getElementById("puntaje2").innerHTML = this.puntaje;
+        document.getElementById("puntaje3").innerHTML = this.puntaje;
+        if(i == 1) {
+            getImage(1);
+        } else if(i == 2) {
+            getImage(2);
+        } else {
+            getImage(3);
+        }
+    } else {
+        alert("WRONG ANSWER");  
+    }   
+}
+loadMedium = function () {
 
+    document.getElementById("mediumImage").background = "img/";
+};
