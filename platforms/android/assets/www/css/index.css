@@ -1,5 +1,10 @@
-#map_canvas {
-  width: 500px;
-  height: 400px;
-  background-color: #CCC;
+.start-button {
+	text-decoration: none;
+	margin: 2% !important;
+	color: black;
+	margin-top:20%;
+	font-size:50px !important;
+	border-radius:10px;
+	background-color: #d0efd0;
+	border-color: #d0efd0;
 }

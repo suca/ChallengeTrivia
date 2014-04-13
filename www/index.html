@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -18,4 +18,122 @@
     <div id="map_canvas"></div>
 
   </body>
+</html>
+-->
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name = "format-detection" content = "telephone=no"/>
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width;" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title></title>
+        
+        <script type="text/javascript" src="js/zepto.min.js"></script>
+         
+        <script type="text/javascript" src="js/index.js"></script>
+
+
+        <link rel="stylesheet" href="libPresentation/css/reveal.min.css">
+        <link rel="stylesheet" href="libPresentation/css/theme/default.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="libPresentation/lib/css/zenburn.css">
+        
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>WHERE On EARTH</h1>
+                    <h3>Try it!</h3>
+                    <p>
+                        <button class="start-button" onclick="startGame();">START</button><br>
+                        
+                        <button class="start-button" onclick="startGame();">OPTIONS</button><br>
+
+                        <button class="start-button" onclick="startGame();">EXIT</button><br>
+                        
+                    </p>
+                </section>
+
+                <section>
+                    <h2>DIFFICULTy</h2>
+                    <div>
+                        <button class="start-button" onclick="startGame();">EASY</button>
+                        
+                        <button class="start-button" onclick="startGame();">MEDIUM</button>
+
+                        <button class="start-button" onclick="startGame();">HARD</button>
+                    </div>
+
+                </section>
+
+                <!-- Example of nested vertical slides -->
+                <section>
+                    <h2>Maps </h2>
+                    <p>
+                        
+                    </p>
+                    
+                </section>
+
+                <section>
+                    <h2>EASY</h2>
+                    <p>
+                        
+                    </p>
+                </section>
+                <section>
+                    <h2>DIFFICULT</h2>
+                    <p>
+                        
+                    </p>
+                </section>
+                <section>
+                    <h2>HARD</h2>
+                    <p>
+                        
+                    </p>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="libPresentation/lib/js/head.min.js"></script>
+        <script src="libPresentation/js/reveal.min.js"></script>
+
+        <script>
+
+            Reveal.initialize({
+                progress: true,
+                history: false,
+                center: true,
+                mouseWheel: false,
+                autoSlide: 0,
+                controls: false,
+                theme: Reveal.getQueryHash().theme,
+                transition: Reveal.getQueryHash().transition || 'default',
+
+                dependencies: [
+                    { src: 'libPresentation/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'libPresentation/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'libPresentation/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'libPresentation/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+
+        </script>
+
+    </body>
 </html>
